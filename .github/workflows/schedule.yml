@@ -1,7 +1,7 @@
 name: simple scheduler
 on:
   schedule:
-  - cron: '*/1 * * * *'
+    - cron: '*/1 * * * *'
 
 jobs:
   hello_world:
