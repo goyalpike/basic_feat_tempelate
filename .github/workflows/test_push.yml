@@ -13,3 +13,11 @@ jobs:
             - uses: actions/checkout@v2
             - name: Run a one-line script
               run: echo "Hello World!"
+
+    goodbye:
+        runs-on: ubuntu-latest
+        steps:
+          - name: goodbye world!
+            run: echo "Goodbye world!"
+            shell: bash
+            
