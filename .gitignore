@@ -1,0 +1,3 @@
+**/__pycache__/
+.coverage
+src/math_ops.egg-info/

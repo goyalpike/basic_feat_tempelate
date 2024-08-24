@@ -1,7 +1,7 @@
 name: Create a comment on a new issue
 
 on:
-    issues: 
+    issues:
         types: [opened]
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
                   This is a multi-line test comment
                   - With GitHub **Markdown** :sparkles:
                   - Created by [create-or-update-comment][1]
-      
+
                   [1]: https://github.com/peter-evans/create-or-update-comment
                 reactions: '+1'
 
@@ -38,4 +38,3 @@ jobs:
                 https://api.github.com/repos/$REPO/issues/$ISSUE_NUMBER/comments \
                 -d '{"body": "This is a multi-line test comment\n- With GitHub **Markdown** :sparkles:\n- Created by GitHub API"}'
             shell: bash
-
