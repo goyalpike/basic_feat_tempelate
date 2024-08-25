@@ -1,0 +1,6 @@
+site_name: Simple Math Functions
+theme:
+  name: material
+
+plugins:
+    - mkdocs-jupyter
