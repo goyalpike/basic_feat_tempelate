@@ -1,0 +1,52 @@
+name: Code-quality-with-conda
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+  conda-installation-and-pre-commit:
+    runs-on: ubuntu-latest  # Use a valid GitHub runner, like ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3  # Make sure you use a valid version
+
+      - name: Install Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniconda-version: "latest"
+          auto-update-conda: true
+          python-version: '3.11'
+          activate-environment: local_env
+          channels: conda-forge
+
+      - name: Initialize Conda
+        run: |
+          conda init bash
+          source ~/.bashrc
+        shell: bash -l {0}
+
+      - name: Install Poetry and Dependencies
+        run: |
+          source ~/.bashrc
+          conda activate local_env
+          conda install poetry # Either install poetry directly or via pip in the later commented lines
+          # pip install pipx
+          # pipx ensurepath
+          # pipx install poetry
+          # export PATH="$HOME/.local/bin:$PATH"  # Ensure pipx bin directory is in PATH
+          poetry install
+
+      - name: Run Pre-commit Hooks
+        run: |
+          source ~/.bashrc
+          conda activate local_env
+          poetry run pre-commit run --all-files
+
+      - name: Run tests
+        run: |
+          source ~/.bashrc
+          conda activate local_env
+          poetry run pytest
+
+

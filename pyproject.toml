@@ -13,6 +13,7 @@ mypy = "^1.11.1"
 pre-commit = "^3.8.0"
 black = "^24.8.0"
 ruff = "^0.6.2"
+jupyterlab = "^4.2.4"
 
 
 [build-system]
@@ -22,6 +23,8 @@ build-backend = "poetry.core.masonry.api"
 [tool.ruff]
 # Set the maximum line length to 100.
 line-length = 100
+include = ["**/*.ipynb"]  # Explicitly include all .ipynb files
+
 
 
 [tool.ruff.lint]
@@ -39,18 +42,17 @@ select = [
     "B",
     # flake8-simplify
     "SIM",
-    # isor,
+    # isort,
     "I",
     # pydocstyle
     "D",
 ]
-ignore = ["E501","D101"]
+ignore = ["D101"]
 exclude = [
     "test_*.py",   # Exclude files that start with test_
     "tests/*.py",  # Exclude files in a tests/ directory
     "**/__init__.py" # Exclude init files
 ]
-
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
