@@ -5,15 +5,14 @@ repos:
       name: ruff lint
       entry: poetry run ruff check
       language: system
-      types_or: [python, pyi, jupyter]
-      files: \.ipynb$ 
-      args: [--fix, --force-exclude, -v]
+      types_or: [python, pyi]
+      args: [--fix, --force-exclude]
+
     - id: ruff-format
       name: ruff format
       entry: poetry run ruff format
       language: system
-      types_or: [python, pyi, jupyter]
-      args: [--force-exclude, -v]
+      types_or: [python, pyi]
 
 
 - repo: https://github.com/pre-commit/mirrors-mypy

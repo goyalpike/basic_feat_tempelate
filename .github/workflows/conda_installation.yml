@@ -9,7 +9,7 @@ jobs:
   conda-installation-and-pre-commit:
     runs-on: ubuntu-latest  # Use a valid GitHub runner, like ubuntu-latest
     steps:
-      - uses: actions/checkout@v3  # Make sure you use a valid version
+      - uses: actions/checkout@v4  # Make sure you use a valid version
 
       - name: Install Miniconda
         uses: conda-incubator/setup-miniconda@v3
