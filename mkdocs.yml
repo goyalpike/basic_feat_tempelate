@@ -12,7 +12,6 @@ plugins:
   - mkdocs-autoapi
   - mkdocstrings:
       handlers:
-      python:
         options:
           show_submodules: true
           show_source: true
