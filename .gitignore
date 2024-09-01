@@ -3,3 +3,4 @@
 src/math_ops.egg-info/
 **/*.ipynb
 src/notebooks/
+**/.DS_Store

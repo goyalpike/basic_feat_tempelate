@@ -8,3 +8,5 @@ It contains as of now two examples. Please [visit simple example](./examples/01_
 ## TODO
 We are in the stage of making more fancy. 
 
+!!! note "About the Module"
+    The `math_ops` module is highly optimized for performance and supports both integer and floating-point operations.

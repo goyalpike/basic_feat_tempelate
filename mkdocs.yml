@@ -2,5 +2,22 @@ site_name: Simple Math Functions
 theme:
   name: material
 
+markdown_extensions:
+  - admonition
+
 plugins:
-    - mkdocs-jupyter
+  - search
+  - mkdocs-jupyter
+  - autorefs
+  - mkdocs-autoapi
+  - mkdocstrings:
+      handlers:
+      python:
+        options:
+          show_submodules: true
+          show_source: true
+
+nav:
+  - Home: index.md
+  - Examples: examples/*
+  - Code Documentation: code_documentation.md

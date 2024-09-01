@@ -17,6 +17,9 @@ jupyterlab = "^4.2.4"
 jupytext = "^1.16.4"
 mkdocs-material = "^9.5.33"
 mkdocs-jupyter = "^0.24.8"
+mkdocstrings = {extras = ["python"], version = "^0.25.2"}
+mkdocs-autorefs = "^1.1.0"
+mkdocs-autoapi = "^0.2.1"
 
 
 [build-system]
