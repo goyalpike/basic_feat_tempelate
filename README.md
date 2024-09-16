@@ -13,3 +13,4 @@
 
 ## Some references
 - [Change of style file](https://www.youtube.com/watch?v=eJVVbZYUYro)
+- [Introductio to Docker: Full course](https://www.youtube.com/watch?v=RqTEHSBrYFw&t=13148s)

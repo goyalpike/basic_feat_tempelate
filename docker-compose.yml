@@ -1,0 +1,12 @@
+name: docker_compose_test
+services:
+    simplemath:
+        stdin_open: true
+        tty: true
+        container_name: mymath
+        ports:
+            - 8888:8888
+        image: smi
+        build: 
+          dockerfile: ./Dockerfile
+          context: .

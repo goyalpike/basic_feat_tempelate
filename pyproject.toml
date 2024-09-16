@@ -6,7 +6,7 @@ authors = ["Pawan Goyal <goyalp@mpi-magdeburg.mpg.de>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 pytest = "^8.3.2"
 pytest-cov = "^5.0.0"
 mypy = "^1.11.1"
@@ -20,6 +20,7 @@ mkdocs-jupyter = "^0.24.8"
 mkdocstrings = {extras = ["python"], version = "^0.25.2"}
 mkdocs-autorefs = "^1.1.0"
 mkdocs-autoapi = "^0.2.1"
+numpy = "^2.1.1"
 
 
 [build-system]
