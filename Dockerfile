@@ -42,4 +42,4 @@ RUN poetry install
 
 EXPOSE 8888
 
-CMD ["poetry", "run", "jupyter-lab", "--port=8888", "--no-browser", "--allow-root", "--ip=0.0.0.0"]
+# CMD ["poetry", "run", "jupyter-lab", "--port=8888", "--no-browser", "--allow-root", "--ip=0.0.0.0"]

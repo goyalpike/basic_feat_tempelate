@@ -1,8 +1,9 @@
 name: docker_compose_test
 services:
     simplemath:
-        stdin_open: true
-        tty: true
+        # stdin_open: true
+        # tty: true
+        command: sleep infinity
         container_name: mymath
         ports:
             - 8888:8888
@@ -10,3 +11,7 @@ services:
         build: 
           dockerfile: ./Dockerfile
           context: .
+        volumes:
+            - type: bind
+              source: ./
+              target: /usr/src/python_pkg
